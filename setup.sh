@@ -24,7 +24,7 @@ instalar(){
     genfstab -pU /mnt >> /mnt/etc/fstab
 
     cp $0 /mnt/setup.sh
-    arch-chroot /mnt ./setup.sh chroot
+    arch-chroot /mnt sh setup.sh chroot
 
 }
 
@@ -32,7 +32,7 @@ configurar(){
     echo "dell3442" > /etc/hostname
     sed -i 's/#\[multilib\]/\[multilib\]\nInclude \= \/etc\/pacman.d\/mirrorlist/' /etc/pacman.conf
     sed -i 's/#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
-    pacman -Syyu --noconfirm refind os-prober ntfs-3g netwokmanager efibootmgr gvfs gvfs-mtp xdg-user-dirs nano netctl wpa_supplicant dialog wget git zsh
+    pacman -Syyu --noconfirm refind os-prober ntfs-3g networkmanager efibootmgr gvfs gvfs-mtp xdg-user-dirs nano netctl wpa_supplicant dialog wget git zsh
     systemctl enable NetworkManager
     ln -sf /usr/share/zoneinfo/America/Guayaquil /etc/localtime
 
