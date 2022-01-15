@@ -50,7 +50,7 @@ configurar(){
     sed -i 's/#%wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
     echo -en "$password\n$password" | passwd
-    useradd -m -s /usr/bin/zsh g users -G audio,lp,optical,storage,video,wheel,games,power,scanner,adbusers,vboxusers edwin
+    useradd -m -s /usr/bin/zsh g users -G audio,lp,optical,storage,video,wheel,games,power,scanner edwin
     echo -en "$password\n$password" | passwd edwin
 
     pacman -Syy --noconfirm mesa mesa-demos xf86-video-intel intel-ucode lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader
