@@ -1,6 +1,6 @@
 #!/bin/bash
 
-arroot="/dev/sda2"
+arroot="/dev/sda4"
 password="edwinbra"
 
 instalar(){
