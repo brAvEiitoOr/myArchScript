@@ -13,9 +13,9 @@ instalar(){
     mount /dev/sda1 /mnt/boot/efi
     
     #Mirrors y pacman
-    echo "Server = http://mirror.espoch.edu.ec/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
-    echo "Server = http://mirror.cedia.org.ec/archlinux/\$repo/os/\$arch" >> /etc/pacman.d/mirrorlist
-
+    echo "Server = http://mirror.cedia.org.ec/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
+    echo "Server = http://mirror.espoch.edu.ec/archlinux/\$repo/os/\$arch" >> /etc/pacman.d/mirrorlist
+    
     pacman -Syy
 
     #instalacionBase
